@@ -1,5 +1,5 @@
 let currentStep = 1;
-const totalSteps = 7; // Total number of steps
+const totalSteps = 9; // Total number of steps
 
 function nextStep() {
     const currentStepDiv = document.getElementById(`step${currentStep}`);
