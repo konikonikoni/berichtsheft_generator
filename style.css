@@ -3,39 +3,47 @@ body {
     text-align: center;
 }
 
-.step-form {
-    display: none;
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 50px;
 }
 
-.step-form.active {
-    display: block;
+textarea {   
+    height: 100px;
 }
 
 input[type="text"] {
+    min-width: 200px;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid lightgray;
-    border-radius: 0.25em;
+    outline: 1px solid skyblue;
+    border: 0;
 }
 
 button {
     padding: 10px 20px;
-    background-color: royalblue;
+    background-color: skyblue;
     color: white;
     border: none;
     cursor: pointer;
-    border-radius: 0.25em;
+    margin: 0 5px;
 }
 
 .progress-bar {
-    width: 90%;
-    background-color: lightgray;
-    margin: 10px auto;
+    width: 300px;
+    background-color: whitesmoke;
+    margin: 20px auto;
 }
 
 .progress {
     width: 0%;
-    height: 10px;
-    background-color: royalblue;
+    height: 30px;
+    background-color: skyblue;
 }
