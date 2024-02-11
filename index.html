@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Berichtsheft Generator</title>
+</head>
+<body>
+    <div id="step1" class="step-form active">
+        <h2>Schritt 1: Wie lautet Dein Name?</h2>
+        <input type="text" id="studentName" placeholder="Vorname Nachname">
+        <button onclick="nextStep()">Next</button>
+    </div>
+
+    <div id="step2" class="step-form">
+        <h2>Schritt 2: In welcher Klasse bist Du?</h2>
+        <input type="text" id="className" placeholder="Klasse">
+        <button onclick="nextStep()">Next</button>
+    </div>
+
+    <div id="step3" class="step-form">
+        <h2>Schritt 3: Wie lautet das aktuelle Ausbildungsjahr?</h2>
+        <input type="text" id="aubiJahr" placeholder="Ausbildungsjahr">
+        <button onclick="nextStep()">Next</button>
+    </div>
+
+    <div id="step4" class="step-form">
+        <h2>Schritt 4: Wie lautet die Bezeichnung des Lernfelds?</h2>
+        <input type="text" id="lernFeld" placeholder="Lernfeld">
+        <button onclick="nextStep()">Next</button>
+    </div>
+
+    <div id="step5" class="step-form">
+        <h2>Schritt 5: Wie lautet der Name des Trainers?</h2>
+        <input type="text" id="trainerName" placeholder="Your Name">
+        <button onclick="nextStep()">Next</button>
+    </div>
+
+    <div id="step6" class="step-form">
+        <h2>Step 2: Enter Your Class Name</h2>
+        <input type="text" id="className" placeholder="Class Name">
+        <button onclick="nextStep()">Next</button>
+    </div>
+
+    <div class="progress-bar">
+        <div class="progress"></div>
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
