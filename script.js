@@ -24,21 +24,20 @@ function nextStep() {
 function generateDays() {
     const startDate = new Date(document.getElementById('startDate').value);
     const endDate = new Date(document.getElementById('endDate').value);
-    const daysDifference = Math.floor((endDate - startDate) / (1000 * 60 * 60 * 24));
-
     const workDetailsDiv = document.getElementById('workDetails');
     workDetailsDiv.innerHTML = '';
 
-    for (let i = 0; i <= daysDifference; i++) {
-        const currentDate = new Date(startDate);
-        currentDate.setDate(startDate.getDate() + i);
-        const dateString = currentDate.toISOString().split('T')[0];
-        const day = getDayOfWeek(currentDate.getDay());
+    while (startDate <= endDate) {
+        if (startDate.getDay() !== 0 && startDate.getDay() !== 6) {
+            const dateString = startDate.toISOString().split('T')[0];
+            const day = getDayOfWeek(startDate.getDay());
 
-        const textArea = document.createElement('textarea');
-        textArea.placeholder = `${day}, ${dateString}: Enter work details`;
-        textArea.name = `workDetails_${dateString}`;
-        workDetailsDiv.appendChild(textArea);
+            const textArea = document.createElement('textarea');
+            textArea.placeholder = `${day}, ${dateString}: Enter work details`;
+            textArea.name = `workDetails_${dateString}`;
+            workDetailsDiv.appendChild(textArea);
+        }
+        startDate.setDate(startDate.getDate() + 1);
     }
 
     nextStep();
